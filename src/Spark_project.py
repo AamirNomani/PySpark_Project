@@ -6,6 +6,7 @@ from pyspark.sql.types import IntegerType, DoubleType
 # ---------------------------------------------------------
 spark = SparkSession.builder \
     .appName("TravelInsuranceTransform") \
+    .config("hive.metastore.uris", "thrift://18.134.163.221:9083") \
     .enableHiveSupport() \
     .getOrCreate()
 
